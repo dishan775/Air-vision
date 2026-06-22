@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Vision - Air Quality Map</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">AV</div>
+      <div class="sidebar-brand">Air Vision</div>
+    </div>
+    <div class="sidebar-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="map.html" class="active">Air Quality Map</a>
+      <a href="vegetation.html">Vegetation Index</a>
+      <a href="vehicle-detection.html">Vehicle Detection</a>
+      <a href="ml-predictions.html">ML Forecast</a>
+      <a href="reports.html">Reports</a>
+      <a href="settings.html">Settings</a>
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-title">Air Quality Map</div>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">Live Air Quality</h1>
+      <p class="page-desc">Interactive heatmap of pollutant distribution.</p>
+    </div>
+    <div class="glass-card">
+      <div class="card-body map-container">
+        <div class="map-placeholder">
+          <div class="map-grid"></div>
+          <div class="map-dot"></div>
+          <p style="z-index: 2; position: relative;">Map Loading...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

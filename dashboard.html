@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Vision - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">AV</div>
+      <div class="sidebar-brand">Air Vision</div>
+    </div>
+    <div class="sidebar-nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="map.html">Air Quality Map</a>
+      <a href="vegetation.html">Vegetation Index</a>
+      <a href="vehicle-detection.html">Vehicle Detection</a>
+      <a href="ml-predictions.html">ML Forecast</a>
+      <a href="reports.html">Reports</a>
+      <a href="settings.html">Settings</a>
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-title">Dashboard</div>
+      <div class="topbar-subtitle">Overview of environmental metrics</div>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">Dashboard Overview</h1>
+      <p class="page-desc">Real-time summary of air quality and environmental health.</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card aqi-moderate">
+        <div class="metric-label">AQI</div>
+        <div class="metric-value">68</div>
+        <div class="metric-unit">Moderate</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Vehicles Detected</div>
+        <div class="metric-value">1,402</div>
+        <div class="metric-unit">Last hour</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Avg NDVI</div>
+        <div class="metric-value">0.45</div>
+        <div class="metric-unit">Healthy</div>
+      </div>
+    </div>
+    <div class="glass-card">
+      <div class="card-header"><h2 class="card-title">Recent Activity</h2></div>
+      <div class="card-body"><p>System is online and processing data.</p></div>
+    </div>
+  </div>
+</body>
+</html>
