@@ -1,50 +1,7 @@
 // ═══ Video Fade Loop Logic ═══
 const heroVideo = document.getElementById('heroVideo');
 if (heroVideo) {
-  let fadingIn = true;
-  let fadingOut = false;
-
   heroVideo.play().catch(() => {});
-
-  function monitorVideo() {
-    if (!heroVideo.duration || heroVideo.paused) {
-      requestAnimationFrame(monitorVideo);
-      return;
-    }
-    const ct = heroVideo.currentTime;
-    const dur = heroVideo.duration;
-    const fadeTime = 0.5;
-
-    // Fade in at start
-    if (ct < fadeTime) {
-      heroVideo.style.opacity = Math.min(1, ct / fadeTime);
-      fadingIn = true;
-    } else if (fadingIn) {
-      heroVideo.style.opacity = '1';
-      fadingIn = false;
-    }
-
-    // Fade out before end
-    const remaining = dur - ct;
-    if (remaining < fadeTime && remaining > 0) {
-      heroVideo.style.opacity = Math.max(0, remaining / fadeTime);
-      fadingOut = true;
-    } else if (fadingOut && remaining <= 0) {
-      fadingOut = false;
-    }
-
-    requestAnimationFrame(monitorVideo);
-  }
-  requestAnimationFrame(monitorVideo);
-
-  heroVideo.addEventListener('ended', () => {
-    heroVideo.style.opacity = '0';
-    setTimeout(() => {
-      heroVideo.currentTime = 0;
-      heroVideo.play().catch(() => {});
-      fadingIn = true;
-    }, 100);
-  });
 }
 
 // ═══ Nav Scroll Effect ═══
